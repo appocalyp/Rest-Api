@@ -494,56 +494,6 @@ router.get('/nulis', async (req, res, next) => {
 		   })
 })
 
-router.get('/txtmaker', async (req, res, next) => {
-        var theme = req.query.theme,
-             text = req.query.text,           
-             apikeyInput = req.query.apikey;
-        
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'apx7api') return res.json(loghandler.invalidKey)
-        if (!theme) return res.json(loghandler.nottheme)
-        if (theme != 'neonglow') return res.json(loghandler.notheme)
-        if (!text) return res.json(loghandler.nottext)
-
-        if (theme == 'neonglow') {
-        	if (!text2) return res.json(loghandler.nottext2)
-            try {
-            request.post({
-                url: "https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html",
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: `text_0=${text}&login=OK`,
-                }, (e,r,b) => {
-                    if (!e) {
-                        $ = cheerio.load(b)
-                        $(".thumbnail").find("img").each(function() {
-                            h = $(this).attr("src")
-                            var result = "https://photooxy.com/"+h
-                            fetch(encodeURI(`https://api.imgbb.com/1/upload?expiration=120&key=93f5c8966cfaf3ca19051ee9f85c14f3&image=${result}&name=${randomTextNumber}`))
-                                .then(response => response.json())
-                                .then(data => {
-                                    var urlnya = data.data.url,
-                                        delete_url = data.data.delete_url;
-                                        res.json({
-                                            status : true,
-                                            creator : `${creator}`,
-                                            message : `jangan lupa follow ${creator}`,
-                                            result:{
-                                                url:urlnya,
-                                                delete_url: delete_url,
-                                                info: 'url akan hilang setelah 2 menit'
-                                            }
-                                        })
-                                })
-                        })
-                    }
-                })
-                } catch (e) {
-                	console.log(e);
-                res.json(loghandler.error)
-                })
-                
 router.get('/textmaker', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
