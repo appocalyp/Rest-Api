@@ -153,10 +153,10 @@ var len = 15
             randomlagi += arr[Math.floor(Math.random() * arr.length)];
         }
 
-        var randomTextNumber = random+randomlagi+'---------DappaGanteng'+'DAPPA--GANS';
+        var randomTextNumber = random+randomlagi+'---------ArdyyGanteng'+'Ardyy--GANS';
         
  
- async function cekApiKey(api) {
+ async function cekApiKey(api)
  	ap = await zahirr.findOne({apikey:api})
  return ap;
  }
