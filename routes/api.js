@@ -920,9 +920,9 @@ router.get('/txtmaker', async (req, res, next) => {
             request.post({
                 url: "https://en.ephoto360.com/write-text-on-wet-glass-online-589.html",
                 headers: {
-                    'Content-Type': 'multipart/form-data'
+                    'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: `text-0=${text}&submit=GO`,
+                body: `text[]=${text}&submit=GO`,
                 }, (e,r,b) => {
                     if (!e) {
                         $ = cheerio.load(b)
