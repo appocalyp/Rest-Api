@@ -57,25 +57,3 @@
 | Text Maker Glow | api/textmaker/metallic?text=Zhirrr&theme=glow&apikey=MASUKIN_APIKEY |
 | Text Maker Summer | api/textmaker/alam?text=Zhirrr&theme=summer&apikey=MASUKIN_APIKEY |
 | Text Maker Flower | api/textmaker/alam?text=Zhirrr&theme=flower&apikey=MASUKIN_APIKEY |
-
-
-## Cara Ganti ApiKey Gimana?
-Cara Mengganti Nya Cukup Gampang, Kalian Hanya Perlu Untuk Mengganti Syntax Di Bawah Ini
-```js
-if(apikeyInput != 'MASUKKAN_NAMA_APIKEY') return res.json(loghandler.invalidKey)
-```
-Atau
-
-```js
-if(apikey != 'MASUKAN_NAMA_APIKEY') return res.json(loghandler.invalidKey)
-```
-
-### Berikut Adalah Cara Deploy API Ini Ke Dalam Heroku
-<p align="center">
-<img src="https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/tutor/heroku/Screenshot_2021-02-23-17-47-56-969_com.android.chrome.png"/>
-<img src="https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/tutor/heroku/Screenshot_2021-02-23-17-48-56-435_com.android.chrome.png"/>
-<img src="https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/tutor/heroku/Screenshot_2021-02-23-17-49-37-427_com.android.chrome.png"/>
-<img src="https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/tutor/heroku/Screenshot_2021-02-23-17-51-08-627_com.android.chrome.png"/>
-<img src="https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/tutor/heroku/Screenshot_2021-02-23-17-51-35-141_com.android.chrome.png"/>
-<img src="https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/tutor/heroku/Screenshot_2021-02-23-17-52-12-691_com.android.chrome.png"/>
-</p>
