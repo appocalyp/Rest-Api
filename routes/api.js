@@ -922,13 +922,13 @@ router.get('/txtmaker', async (req, res, next) => {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
-                body: `text[]=${text}&submit=GO`,
+                body: `text-0=${text}&submit=GO`,
                 }, (e,r,b) => {
                     if (!e) {
                         $ = cheerio.load(b)
                         $(".thumbnail").find("img").each(function() {
                             h = $(this).attr("src")
-                            var result = "https://photooxy.com/"+h
+                            var result = "https://en.ephoto360.com/"+h
                             fetch(encodeURI(`https://api.imgbb.com/1/upload?expiration=120&key=761ea2d5575581057a799d14e9c78e28&image=${result}&name=${randomTextNumber}`))
                                 .then(response => response.json())
                                 .then(data => {
