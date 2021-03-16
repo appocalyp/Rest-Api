@@ -582,9 +582,7 @@ router.get('/textmaker', async (req, res, next) => {
                 }) 
         } else {
             res.json(loghandler.error)
-        }
-})
-else if (theme == 'google-suggestion') {
+        } else if (theme == 'google-suggestion') {
         	if (!text2) return res.json(loghandler.nottext2)
         if (!text3) return res.json(loghandler.nottext3)
             request.post({
