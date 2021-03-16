@@ -876,7 +876,7 @@ router.get('/txtmaker', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'apx7api') return res.json(loghandler.invalidKey)
         if (!theme) return res.json(loghandler.nottheme)
-        if (theme != 'neonglow' && theme != 'textglass') return res.json(loghandler.notheme)
+        if (theme != 'neonglow' && theme != 'naruto') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
 
         if (theme == 'neonglow') {
