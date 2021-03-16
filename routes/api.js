@@ -866,7 +866,7 @@ router.get('/fbdown', async (req, res, next) => {
 })
 })
 
-router.get('/textmaker/metallic', async (req, res, next) => {
+router.get('/txtmaker', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
