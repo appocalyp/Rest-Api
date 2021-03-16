@@ -915,7 +915,8 @@ router.get('/txtmaker', async (req, res, next) => {
                 } catch (e) {
                 	console.log(e);
                 res.json(loghandler.error)
-                })
+                }
+})
 
 router.get('/textmaker/metallic', async (req, res, next) => {
         var theme = req.query.theme,
