@@ -951,7 +951,7 @@ router.get('/imgmanipulation', async (req, res, next) => {
         	if (!url) return res.json(loghandler.noturl)
             try {
             request.post({
-                url: "https://photooxy.com/art-effects/your-photo-burning-on-hand-192.html",
+                url: "https://photooxy.com/art-effects/3d-lines-photo-effect-302.html",
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
