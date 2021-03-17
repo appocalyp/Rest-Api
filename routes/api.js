@@ -920,7 +920,7 @@ router.get('/txtmaker', async (req, res, next) => {
             request.post({
                 url: "https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html",
                 headers: {
-                    'Content-Type': 'multipartapplication/x-www-form-urlencoded'
+                    'Content-Type': 'application/x-www-form-urlencoded'
                 },
                 body: `text_2=${text}&login=OK`,
                 }, (e,r,b) => {
